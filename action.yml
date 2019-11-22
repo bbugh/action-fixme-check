@@ -1,0 +1,9 @@
+name: 'FIXME alert'
+description: 'Check for `FIXME` and fail if any are found, with annotations.'
+author: '@bbugh'
+branding:
+  icon: 'list'  
+  color: 'orange'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
