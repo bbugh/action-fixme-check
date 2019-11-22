@@ -5,4 +5,6 @@ LABEL com.github.actions.description="Check your code for `FIXME` labels"
 LABEL com.github.actions.icon="code"
 LABEL com.github.actions.color="yellow"
 
-ENTRYPOINT ["lib/entrypoint.sh"]
+COPY lib/entrypoint.sh /entrypoint.sh
+COPY lib/git-grep-problem-matcher.json /git-grep-problem-matcher.json
+ENTRYPOINT ["/entrypoint.sh"]
