@@ -1,5 +1,5 @@
 name: 'FIXME alert'
-description: 'Check for `FIXME` and fail if any are found, with annotations.'
+description: 'Check code for `FIXME:` and fail (with annotations) if any are found.'
 author: '@bbugh'
 branding:
   icon: 'list'  
