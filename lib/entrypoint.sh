@@ -1,7 +1,5 @@
 #!/bin/sh
 
-set -e
-
 # With problem matchers in a container, the matcher config MUST be available
 # outside the container on the VM so we will just copy it into the workspace.
 # See: https://github.com/actions/toolkit/issues/205#issuecomment-557647948
