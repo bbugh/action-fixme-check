@@ -1,11 +1,16 @@
-# action-fixme-alert
+# action-fixme-check
 
-Checks the code base for any `FIXME:` (with the colon) and fails the check if any are found. Useful if you want to make sure that you don't miss any required changes in the code base before merging a PR.
+Checks the code base for any `FIXME:` (with the colon) and fails the check if
+any are found. Useful if you want to make sure that you don't miss any required
+changes in the code base before merging a PR.
 
-This uses the built-in `git grep` command, and the built-in [action problem
-matchers](https://github.com/actions/toolkit/blob/master/docs/problem-matchers.md),
-so it's very fast. It only takes a few seconds to run, even on a very large
-codebase.
+It runs very fast, taking only a few seconds to finish even on a very large
+codebase. All files in the repository will be read, including binary files (it
+uses `git grep` under the hood).
+
+In your checks list and PR, you get helpful annotations like this:
+
+![Annotation Example](fixme-annotation-example.png)
 
 ## Installation
 
@@ -29,7 +34,7 @@ jobs:
 
 ## Support
 
-- [Official workflow configuration docs](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions).
+- [Official workflow configuration docs](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions)
 
 ## License
 
