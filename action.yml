@@ -7,9 +7,15 @@ branding:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.case-sensitive }}  
 inputs:
   terms:
     description: 'The pipe-delimited searchable terms to pass as a regex group to `git grep`.'
     required: false
     default: "FIXME"
+  case-sensitive:
+    description: 'Whether the searchable terms pass to `git grep` should be case-sensitive or not.'
+    required: false
+    default: false
 

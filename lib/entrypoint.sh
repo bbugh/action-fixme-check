@@ -8,8 +8,18 @@ cp /git-grep-problem-matcher.json "$matcher_path"
 
 echo "::add-matcher::git-grep-problem-matcher.json"
 
+
+case_sensitive="${1}"
+
+if [ ${case_sensitive} = false ]; then
+	case_sensitive="--ignore-case"
+else
+	unset case_sensitive
+fi
+
+
 tag=${INPUT_TERMS:=FIXME}
-result=$(git grep --no-color --line-number --extended-regexp -e "(${tag})+(:)" :^.github)
+result=$(git grep --no-color ${case_sensitive} --line-number --extended-regexp -e "(${tag})+(:)" :^.github)
 
 echo "${result}"
 
