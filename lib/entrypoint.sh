@@ -8,8 +8,8 @@ cp /git-grep-problem-matcher.json "$matcher_path"
 
 echo "::add-matcher::git-grep-problem-matcher.json"
 
-tag="FIXME"
-result=$(git grep --no-color -n -e "${tag}:")
+tag=${INPUT_TERMS:=FIXME}
+result=$(git grep --no-color --ignore-case --line-number --extended-regexp -e "(${tag})+(:)" :^.github)
 
 echo "${result}"
 
