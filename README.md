@@ -2,8 +2,8 @@
 
 Checks the code base for any terms ending with a colon, and fail the check if
 any are found. The default term is `FIXME:`. You can add or change the terms
-using the `term` parameter, see [Installation](#Installation) below. 
-Useful if you want to make sure that you don't miss any required changes in the 
+using the `term` parameter, see [Installation](#Installation) below.
+Useful if you want to make sure that you don't miss any required changes in the
 code base before merging a PR.
 
 It runs very fast, taking only a few seconds to finish even on a very large
