@@ -1,21 +1,20 @@
-name: 'FIXME alert'
-description: 'Check code for specific terms (FIXME, WIP, etc.) and fail (with code annotations) if any are found.'
-author: '@bbugh'
+name: "FIXME alert"
+description: "Check code for specific terms (FIXME, WIP, etc.) and fail (with code annotations) if any are found."
+author: "@bbugh"
 branding:
-  icon: 'list'  
-  color: 'orange'
+  icon: "list"
+  color: "orange"
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "Dockerfile"
   args:
-    - ${{ inputs.case-sensitive }}  
+    - ${{ inputs.case-sensitive }}
 inputs:
   terms:
-    description: 'The pipe-delimited searchable terms to pass as a regex group to `git grep`.'
+    description: "The pipe-delimited searchable terms to pass as a regex group to `git grep`."
     required: false
     default: "FIXME"
   case-sensitive:
-    description: 'Whether the searchable terms passed to `git grep` should be case-sensitive or not.'
+    description: "Whether the searchable terms passed to `git grep` should be case-sensitive or not."
     required: false
     default: false
-
