@@ -34,7 +34,7 @@ jobs:
     - uses: bbugh/action-fixme-check@master # or @ the latest release
       with:
       	terms: 'WIP|FIXME' # optional, defaults to `FIXME`
-      	case-sensitive: false  # optional, defaults to `false`
+      	case-sensitive: false  # optional, defaults to `true`
 ```
 
 ## Support
