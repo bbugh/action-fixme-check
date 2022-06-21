@@ -12,3 +12,4 @@ inputs:
     description: 'The pipe-delimited searchable terms to pass as a regex group to `git grep`.'
     required: false
     default: "FIXME"
+
