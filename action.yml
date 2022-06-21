@@ -17,4 +17,4 @@ inputs:
   case-sensitive:
     description: "Whether the searchable terms passed to `git grep` should be case-sensitive or not."
     required: false
-    default: false
+    default: true
