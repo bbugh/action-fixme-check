@@ -48,8 +48,6 @@ jobs:
 - I am using `FIXME:` here.
 - Nothing to see here.
 - I am using `FIX:` here.
-- I am using `wip:` here.
-- I am using `fixme:` here.
 
 ## License
 
