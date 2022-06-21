@@ -7,12 +7,24 @@ on:
       - 'releases/*'
 
 jobs:
-  test:
+  test-case-sensitive:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
     - uses: ./
       with:
         terms: "wip|fix|fixme"
+        case-sensitive: true
+      env:
+        ENVIRONMENT: test
+  
+  test-case-insensitive:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: ./
+      with:
+        terms: "wip|fix|fixme"
+        case-sensitive: false
       env:
         ENVIRONMENT: test
