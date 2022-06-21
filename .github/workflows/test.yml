@@ -10,7 +10,7 @@ jobs:
   test-case-sensitive:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v1
       - uses: ./
         with:
           terms: "wip|fix|fixme"
@@ -21,7 +21,7 @@ jobs:
   test-case-insensitive:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v1
       - uses: ./
         with:
           terms: "wip|fix|fixme"
