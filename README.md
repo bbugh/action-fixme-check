@@ -1,8 +1,10 @@
 # action-fixme-check
 
-Checks the code base for any `FIXME:` (with the colon) and fails the check if
-any are found. Useful if you want to make sure that you don't miss any required
-changes in the code base before merging a PR.
+Checks the code base for any terms ending with a colon, and fail the check if
+any are found. The default term is `FIXME:`. You can add or change the terms
+using the `term` parameter, see [Installation](#Installation) below. 
+Useful if you want to make sure that you don't miss any required changes in the 
+code base before merging a PR.
 
 It runs very fast, taking only a few seconds to finish even on a very large
 codebase. All files in the repository will be read, including binary files (it
@@ -30,11 +32,22 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - uses: bbugh/action-fixme-check@master # or @ the latest release
+      with:
+      	terms: 'WIP|FIXME' # optional, defaults to `FIXME`
 ```
 
 ## Support
 
 - [Official workflow configuration docs](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions)
+
+## Testing words
+
+(Used for testing this action on itself.)
+
+- I am using `WIP:` here.
+- I am using `FIXME:` here.
+- Nothing to see here.
+- I am using `FIX:` here.
 
 ## License
 
