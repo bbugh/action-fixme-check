@@ -35,6 +35,7 @@ jobs:
       with:
       	terms: 'WIP|FIXME' # optional, defaults to `FIXME`
       	case-sensitive: false  # optional, defaults to `true`
+        pathspec: ':^dir-with-fixme' # optional, defaults to '.', see https://git-scm.com/docs/gitglossary#def_pathspec
 ```
 
 ## Support

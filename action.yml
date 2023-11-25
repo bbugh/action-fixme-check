@@ -9,6 +9,7 @@ runs:
   image: "Dockerfile"
   args:
     - ${{ inputs.case-sensitive }}
+    - ${{ inputs.pathspec }}
 inputs:
   terms:
     description: "The pipe-delimited searchable terms to pass as a regex group to `git grep`."
@@ -18,3 +19,7 @@ inputs:
     description: "Whether the searchable terms passed to `git grep` should be case-sensitive or not."
     required: false
     default: true
+  pathspec:
+    description: "additional pathspec argument for the `git-grep` command, see https://git-scm.com/docs/gitglossary#def_pathspec"
+    required: false
+    default: "."
